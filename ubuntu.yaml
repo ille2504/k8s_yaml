@@ -10,7 +10,7 @@ spec:
     - name: ubuntu
       image: ubuntu
       command: ["sleep"]
-      args: ["3000"]
+      args: ["180"]
 
 
         

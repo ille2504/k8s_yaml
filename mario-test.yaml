@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: mario-test
   labels:
-    tier: test
+    env: test
 spec:
   containers:
     - name: nginx

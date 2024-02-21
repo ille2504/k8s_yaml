@@ -4,22 +4,20 @@ metadata:
   name: myapp-deploy
   labels:
     tier: frontend
-    app: ubuntu
+    app: nginx
 spec:
   selector:
     matchLabels:
       env: production
       type: back-end
-  replicas: 2
+  replicas: 4
   template:
     metadata:
-      name: ubuntu
+      name: nginx
       labels:
         env: production
         type: back-end
     spec:
       containers:
-        - name: ubuntu
-          image: ubuntu
-          command: ["sleep"]
-          args: ["600"]
+        - name: nginx
+          image: nginx

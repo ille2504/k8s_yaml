@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ubuntu
+  name: ubuntu
+spec:
+  containers:
+    - image: ubuntu
+      name: ubuntu
+  tolerations:
+    - key: spray
+      operator: "Exists"
+      effect: "NoSchedule"
+
+
+
